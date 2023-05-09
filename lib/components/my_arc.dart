@@ -6,10 +6,10 @@ import 'package:walkmate/styles/k_colors.dart';
 import 'dart:math' as math;
 
 class MyArc extends StatefulWidget {
-  Color color;
+  Color borderColor;
   double diameter; 
   final  VoidCallback onPressed; 
-   MyArc({super.key , this.diameter = 25 , required this.onPressed, required this.color} );
+   MyArc({super.key , this.diameter = 25 , required this.onPressed, required this.borderColor} );
 
   @override
   State<MyArc> createState() => _MyArcState();
@@ -28,14 +28,14 @@ class _MyArcState extends State<MyArc> {
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular((widget.diameter+4)/2), 
           
-          border: Border.all(width: 3, color:widget.color)
+          border: Border.all(width: 3, color:widget.borderColor)
         ),
         child: Stack(
           children: [
             Transform.rotate( 
               angle: -1.57,
               child: CustomPaint(
-                painter: MyPainter(color: widget.color),
+                painter: MyPainter(color: widget.borderColor),
                 size: Size(widget.diameter, widget.diameter),
               ),
             ),

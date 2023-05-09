@@ -1,9 +1,24 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:walkmate/styles/k_colors.dart';
 
 class KTextStyle {
-  static TextStyle headline1 = TextStyle(
+  static TextStyle headline1white = TextStyle(
+    color:KColor.white, 
+    fontSize: 35,
+    fontWeight: FontWeight.w700,
+    fontFamily: GoogleFonts.inter().fontFamily,
+  );
+  static TextStyle headline1Lite = TextStyle(
+        color:Colors.black,
+
+    fontSize: 35,
+    fontWeight: FontWeight.w700,
+    fontFamily: GoogleFonts.inter().fontFamily,
+  );
+  static TextStyle headline1Dark = TextStyle(
+    color:Colors.white,
     fontSize: 35,
     fontWeight: FontWeight.w700,
     fontFamily: GoogleFonts.inter().fontFamily,
@@ -44,14 +59,38 @@ class KTextStyle {
   );
 
   static TextStyle subtitle1 = TextStyle(
+    color:Colors.white,  
+    fontSize: 16,
+    fontWeight: FontWeight.w700,
+    fontFamily: GoogleFonts.inter().fontFamily,
+  );
+    static TextStyle subtitle1LightMode = TextStyle(
+    color:Colors.white,  
+    fontSize: 16,
+    fontWeight: FontWeight.w700,
+    fontFamily: GoogleFonts.inter().fontFamily,
+  );
+      static TextStyle subtitle1DarkMode = TextStyle(
+    color:Colors.white,  
     fontSize: 16,
     fontWeight: FontWeight.w700,
     fontFamily: GoogleFonts.inter().fontFamily,
   );
 
-  static TextStyle subtitle7 = TextStyle(
+  static TextStyle subtitle7Light = TextStyle(
+    color:KColor.black, 
+    height: 2,
     fontSize: 16,
-    fontWeight: FontWeight.w600,
+    letterSpacing: 3,
+    fontWeight: FontWeight.w400,
+    fontFamily: GoogleFonts.inter().fontFamily,
+  );
+   static TextStyle subtitle7Dark = TextStyle(
+     color:KColor.white, 
+    height: 2,
+    fontSize: 16,
+     letterSpacing: 3,
+    fontWeight: FontWeight.w400,
     fontFamily: GoogleFonts.inter().fontFamily,
   );
 
@@ -75,6 +114,7 @@ class KTextStyle {
   );
 
   static TextStyle button = TextStyle(
+    
     fontSize: 15,
     fontWeight: FontWeight.w400,
     letterSpacing: 0.04,
@@ -82,9 +122,10 @@ class KTextStyle {
     fontFamily: GoogleFonts.inter().fontFamily,
   );
 
-  static TextStyle bodyText1 = TextStyle(
-    fontSize: 14,
-    fontWeight: FontWeight.w400,
+  static TextStyle bodyText1Green = TextStyle(
+    color:KColor.stickerColor, 
+    fontSize: 18,
+    fontWeight: FontWeight.w700,
     fontFamily: GoogleFonts.inter().fontFamily,
   );
 
