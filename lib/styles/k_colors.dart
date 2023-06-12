@@ -53,7 +53,8 @@ class KColor {
   static const Color textBorder = Color(0xFF727272);
   static const Color searchColor = Color(0xFFEAE7E7);
   static const Color cirColor = Color(0xFFE6E6E6);
-  static const Color stickerColor = Color(0xFF37AF59);
+  static const Color stickerColor = Color.fromARGB(255, 43, 180, 82);
+  // static const Color stickerColor = Color.fromRGBO(48, 172, 117, 100);
   static const Color dividerColor = Color(0xFF797979);
   static const Color filterDividerColor = Color(0xFFECEAEA);
   static const Color borderColor = Color(0xFFACACAC);

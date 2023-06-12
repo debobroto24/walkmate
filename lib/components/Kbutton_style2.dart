@@ -17,7 +17,7 @@ class kbutton_style2 extends StatelessWidget {
       alignment: Alignment.center,
       decoration:  BoxDecoration(
         border: Border.all(color: KColor.stickerColor,width: 1.5),
-        borderRadius: BorderRadius.circular(20),
+        borderRadius: BorderRadius.circular(30),
       ),
       child: Text(  
         text,  

@@ -11,7 +11,7 @@ class KTextStyle {
     fontFamily: GoogleFonts.inter().fontFamily,
   );
   static TextStyle headline1Lite = TextStyle(
-        color:Colors.black,
+        color:KColor.baseBlack,
 
     fontSize: 35,
     fontWeight: FontWeight.w700,
@@ -23,8 +23,21 @@ class KTextStyle {
     fontWeight: FontWeight.w700,
     fontFamily: GoogleFonts.inter().fontFamily,
   );
+   static TextStyle headline1Black = TextStyle(
+    color:KColor.baseBlack,
+    fontSize: 35,
+    fontWeight: FontWeight.w700,
+    fontFamily: GoogleFonts.inter().fontFamily,
+  );
 
-  static TextStyle headline2 = TextStyle(
+  static TextStyle headline2White = TextStyle(
+    color:Colors.white, 
+    fontSize: 25,
+    fontWeight: FontWeight.w700,
+    fontFamily: GoogleFonts.inter().fontFamily,
+  );
+  static TextStyle headline2Black = TextStyle(
+    color:KColor.baseBlack, 
     fontSize: 25,
     fontWeight: FontWeight.w700,
     fontFamily: GoogleFonts.inter().fontFamily,
@@ -41,13 +54,27 @@ class KTextStyle {
     fontWeight: FontWeight.w700,
     fontFamily: GoogleFonts.inter().fontFamily,
   );
-  static TextStyle headline5 = TextStyle(
+  static TextStyle headline5Lite = TextStyle(
+    color:KColor.baseBlack, 
+    fontSize: 20,
+    fontWeight: FontWeight.w400,
+    fontFamily: GoogleFonts.inter().fontFamily,
+  );
+  static TextStyle headline5Dark = TextStyle(
+    color:Colors.white, 
     fontSize: 20,
     fontWeight: FontWeight.w400,
     fontFamily: GoogleFonts.inter().fontFamily,
   );
 
-  static TextStyle headline6 = TextStyle(
+  static TextStyle headline6White = TextStyle(
+    color:KColor.white , 
+    fontSize: 18,
+    fontWeight: FontWeight.w700,
+    fontFamily: GoogleFonts.inter().fontFamily,
+  );
+  static TextStyle headline6Black = TextStyle(
+    color:KColor.baseBlack, 
     fontSize: 18,
     fontWeight: FontWeight.w700,
     fontFamily: GoogleFonts.inter().fontFamily,
@@ -58,10 +85,16 @@ class KTextStyle {
     fontFamily: GoogleFonts.inter().fontFamily,
   );
 
-  static TextStyle subtitle1 = TextStyle(
-    color:Colors.white,  
-    fontSize: 16,
-    fontWeight: FontWeight.w700,
+  static TextStyle subtitle1White = TextStyle(
+    color:KColor.white,  
+    fontSize: 18,
+    fontWeight: FontWeight.w500,
+    fontFamily: GoogleFonts.inter().fontFamily,
+  );
+    static TextStyle subtitle1Black = TextStyle(
+    color:KColor.baseBlack,  
+    fontSize: 18,
+    fontWeight: FontWeight.w500,
     fontFamily: GoogleFonts.inter().fontFamily,
   );
     static TextStyle subtitle1LightMode = TextStyle(

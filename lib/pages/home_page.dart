@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'package:walkmate/components/k_appbar.dart';
 import 'package:walkmate/components/kbutton_style1.dart';
+import 'package:walkmate/pages/set_limit.dart';
+import 'package:walkmate/route/routegenerator.dart';
 import 'package:walkmate/styles/k_colors.dart';
 import 'package:walkmate/styles/k_text_styles.dart';
 import 'package:walkmate/theme/theme_modal.dart';
@@ -72,7 +74,12 @@ class _HomePageState extends State<HomePage> {
                     ),
                     Positioned(
                       bottom: 17,
-                      child: KButtonStyle1(text: "Get Started"),
+                      child: InkWell(
+                        onTap: (){
+                        //  Navigator.of(context).push(MaterialPageRoute(builder: (_)=>SetLimit()));
+                        Navigator.of(context).pushNamed(RouteGenerator.setLimitPage);
+                        },
+                        child: KButtonStyle1(text: "Get Started")),
                     )
                   ],
                 ),

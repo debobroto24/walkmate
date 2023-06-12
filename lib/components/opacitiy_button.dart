@@ -6,7 +6,9 @@ class OpacityButton extends StatelessWidget {
   String text;
   bool isDark;
   double opacity; 
+  VoidCallback pressed; 
   OpacityButton({
+    required this.pressed, 
     this.opacity = 0, 
     required this.text,
     this.isDark = false,
@@ -15,40 +17,43 @@ class OpacityButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      alignment: Alignment.center,
-      children: [
-        Opacity(
-          opacity: opacity,
-          child: Container(
+    return InkWell(
+      onTap: pressed,
+      child: Stack(
+        alignment: Alignment.center,
+        children: [
+          Opacity(
+            opacity: opacity,
+            child: Container(
+              width: MediaQuery.of(context).size.width * .85,
+              height: 55,
+              alignment: Alignment.center,
+              decoration: BoxDecoration(
+                  color: KColor.stickerColor,
+                  borderRadius: BorderRadius.circular(30)),
+          
+              // child: Text(text , style: KTextStyle.subtitle1LightMode),
+            ),
+          ),
+          Container(
             width: MediaQuery.of(context).size.width * .85,
             height: 55,
             alignment: Alignment.center,
             decoration: BoxDecoration(
-                color: Colors.red,
+                color: opacity ==0 ? KColor.grey350: KColor.transparent,
                 borderRadius: BorderRadius.circular(30)),
-        
-            // child: Text(text , style: KTextStyle.subtitle1LightMode),
-          ),
-        ),
-        Container(
-          width: MediaQuery.of(context).size.width * .85,
-          height: 55,
-          alignment: Alignment.center,
-          decoration: BoxDecoration(
-              color: opacity ==0 ? KColor.grey350: KColor.transparent,
-              borderRadius: BorderRadius.circular(30)),
-          child: Text(
-            text,
-            style: TextStyle(
-              color: opacity==0 ? KColor.grey : KColor.white,
-              fontSize: 18,
-              fontWeight: FontWeight.w700,
-              fontFamily: GoogleFonts.inter().fontFamily,
+            child: Text(
+              text,
+              style: TextStyle(
+                color: opacity==0 ? KColor.grey : KColor.white,
+                fontSize: 18,
+                fontWeight: FontWeight.w700,
+                fontFamily: GoogleFonts.inter().fontFamily,
+              ),
             ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }
